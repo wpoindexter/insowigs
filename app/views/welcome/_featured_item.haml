@@ -1,0 +1,24 @@
+- has_discount = discount_percentage > 0
+.item.col-lg-3.col-md-3.col-sm-4.col-xs-6
+  .product
+    = link_to '#', class: 'add-fav tooltipHere', data: {toggle: 'tooltip', original: {title: 'Add to Wishlist'}, placement: 'left'} do
+      %i.glyphicon.glyphicon-heart
+    .image
+      = link_to image_tag(image, class: 'img-responsive'), '#'
+      .promotion
+        - if new
+          %span.new-product NEW
+        - if has_discount
+          %span.discount #{discount_percentage}% OFF
+    .description
+      %h4= link_to title, '#'
+      %p= description
+    .price
+      %span= sale_price original_price, discount_percentage
+      - if has_discount
+        %span.old-price= number_to_currency original_price
+    .action-control
+      = link_to '#', class: 'btn btn-primary' do
+        %span.add2cart
+          %i.glyphicon.glyphicon-shopping-cart
+          Add to Cart

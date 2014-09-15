@@ -1,0 +1,13 @@
+.col-md-4.col-sm-6.col-xs-6.col-xs-min-12
+  .inner
+    .box-content-overly.box-content-overly-white
+      .box-text-table
+        .box-text-cell
+          .box-text-cell-inner
+            %h1.uppercase= title
+            %p= description
+            %hr.submini
+            = link_to 'Read More', '#', class: 'btn btn-inverse'
+    .img-title= title
+    = link_to link, class: 'img-block' do
+      = image_tag image, class: 'img-responsive'

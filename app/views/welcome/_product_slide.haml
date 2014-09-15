@@ -1,0 +1,12 @@
+.product-slide
+  .box-content-overly.box-content-overlay-white
+    .box-text-table
+      .box-text-cell
+        .box-text-cell-inner
+          %h1= title
+          = link_to link_text, link, class: 'btn btn-stroke-light'
+          - unless alt_text.empty?
+            %br
+            %br
+            %span= alt_text
+  = image_tag image, class: 'img-responsive'

@@ -14,4 +14,16 @@
 //= require jquery_ujs
 //= require turbolinks
 //= require bootstrap-sprockets
-//= require_tree .
+//= require idangerous.swiper-2.1.min
+//= require idangerous-custom
+//= require jquery.cycle2.min
+//= require jquery.easing.1.3
+//= require jquery.parallax-1.1
+//= require jquery.mousewheel.min
+//= require jquery.mCustomScrollbar
+//= require ion.checkRadio.min
+//= require grids
+//= require owl.carousel.min
+//= require jquery.minimalect.min
+//= require bootstrap.touchspin
+//= require script

@@ -59,7 +59,7 @@
           %button.navbar-toggle{type: 'button', data: {toggle: 'collapse', target: '.navbar-cart'}}
             %i.fa.fa-shopping-cart.colorWhite
             %span.cartResponse.colorWhite Cart ($0)
-          -#= link_to image_tag('logo.png', style: 'height: 30px;'), root_path, class: 'navbar-brand'
+          = link_to image_tag('logo.png', style: 'height: 30px;'), root_path, class: 'navbar-brand'
           .search-box.pull-right.hidden-lg.hidden-md.hidden-sm
             .input-group
               %button.btn.btn-nobg.getFullSearch{type: 'button'}
@@ -69,8 +69,8 @@
           %ul.nav.navbar-nav
             %li.active= link_to 'Home', root_path
             %li= link_to 'Our Mission', '#'
-            %li= link_to 'Our Wigs', '#'
-            %li= link_to 'Customize Wigs', '#'
+            %li= link_to 'Pre-Made Wigs', '#'
+            %li= link_to 'Customized Wigs', '#'
           .nav.navbar-nav.navbar-right.hidden-xs
             = render 'layouts/desktop_cart'
             .search-box
@@ -84,22 +84,5 @@
           %input.search-input{type: 'search', name: 'q', placeholder: 'start typing and hit enter to search', data: {searchurl: 'search?='}}
           %button.btn-nobg.search-btn{type: 'submit'}
             %i.fa.fa-search
-    .container.main-container.headerOffset.globalPaddingBottom
+    = yield
     = javascript_include_tag 'application'
-    :javascript
-      var mySwiper = new Swiper('.swiper-container',{
-      	pagination: '.box-pagination',
-       keyboardControl: true,
-          paginationClickable: true,
-          slidesPerView: 'auto',
-      	autoResize:true,
-      	resizeReInit:true,
-        })
-        $('.prevControl').on('click', function(e){
-          e.preventDefault()
-          mySwiper.swipePrev()
-        })
-        $('.nextControl').on('click', function(e){
-          e.preventDefault()
-          mySwiper.swipeNext()
-        })

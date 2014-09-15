@@ -253,7 +253,7 @@ h3 code {
     padding: 50px 0 0;
 }
 .globalPaddingBottom {
-    padding: 0 0 50px;
+    padding: 0 0 0;
 }
 .hr2 {
     border-width: 2px;
@@ -2254,7 +2254,7 @@ h1.bolder-style.dark, h1.bolder-style.dark a {
     -o-transition: all 0.3s ease 0s;
     -ms-transition: all 0.3s ease 0s;
     margin-bottom: 15px;
-    height: 480px;
+    height: 420px;
 }
 #SimilarProductSlider .item {
     height: auto !important;

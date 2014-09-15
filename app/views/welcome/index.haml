@@ -1,1 +1,37 @@
-%h1 INSO Wigs
+.container.main-container.headerOffset.globalPaddingBottom
+  .image-show-case-wrapper.center-block.relative.col-lg-12
+    #imageShowCase.owl-carousel.owl-theme
+      = render partial: 'product_slide', locals: {title: 'Pre-Made Wigs', link_text: 'Shop Now', link: '#', alt_text: '* covered by most insurers', image: 'backstretch-4.jpg'}
+      = render partial: 'product_slide', locals: {title: 'Custom Wigs', link_text: 'Customize My Wig', link: '#', alt_text: '* covered by most insurers', image: 'backstretch-7.jpg'}
+    %div{style: 'clear: both;'}
+    %a#ps-next.ps-nav
+      = image_tag 'arrow-right.png'
+    %a#ps-prev.ps-nav
+      = image_tag 'arrow-left.png'
+  %div{style: 'clear: both;'}
+  .col-lg-12
+    %hr.hr3
+  .row.featuredPostContainer
+    .featuredImageLook3.col-lg-12
+      = render partial: 'about_cell', locals: {title: 'Cancer / Chemotherapy', description: 'This would be a blurb about why people who have cancer issues would like to come to insowigs.com.', link: '#', image: 'temp-featured-post.jpg'}
+      = render partial: 'about_cell', locals: {title: 'Thyroid Problems', description: 'This would be a blurb about why people who have thyroid issues would like to come to insowigs.com.', link: '#', image: 'temp-featured-post.jpg'}
+      = render partial: 'about_cell', locals: {title: 'Alopecia Areata', description: 'This would be a blurb about why people who have alopecia areata would like to come to insowigs.com.', link: '#', image: 'temp-featured-post.jpg'}
+      = render partial: 'about_cell', locals: {title: 'Scalp Infection', description: 'This would be a blurb about why people who have a scalp infection would like to come to insowigs.com.', link: '#', image: 'temp-featured-post.jpg'}
+      = render partial: 'about_cell', locals: {title: 'Skin Disorders', description: 'This would be a blurb about why people who have a skin disorder would like to come to insowigs.com.', link: '#', image: 'temp-featured-post.jpg'}
+      = render partial: 'about_cell', locals: {title: 'Emotional Struggles', description: 'This would be a blurb about why people who have emotional problems that cause them to pull their hair out would like to come to insowigs.com.', link: '#', image: 'temp-featured-post.jpg'}
+.container.main-container
+  .morePost.row.featuredPostContainer.style2
+    .col-lg-12
+      %h3.boxes-title-1
+        %span Featured Products
+    .container
+      .row.xsResponse
+        = render partial: 'featured_item', locals: {new: true, original_price: 30, discount_percentage: 15, image: 'temp-wig-1.jpg', title: 'Wig 1', description: 'This is a short description of the wig'}
+        = render partial: 'featured_item', locals: {new: true, original_price: 80, discount_percentage: 10, image: 'temp-wig-2.jpg', title: 'Wig 2', description: 'This is a short description of the wig'}
+        = render partial: 'featured_item', locals: {new: true, original_price: 280, discount_percentage: 40, image: 'temp-wig-3.jpg', title: 'Wig 3', description: 'This is a short description of the wig'}
+        = render partial: 'featured_item', locals: {new: true, original_price: 55, discount_percentage: 75, image: 'temp-wig-4.jpg', title: 'Wig 4', description: 'This is a short description of the wig'}
+      .row
+        .load-more-block.text-center
+          = link_to '#', class: 'btn btn-thin' do
+            %i.fa.fa-plus-sign +
+            SHOP ALL PRODUCTS
