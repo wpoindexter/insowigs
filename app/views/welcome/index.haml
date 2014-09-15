@@ -13,12 +13,12 @@
     %hr.hr3
   .row.featuredPostContainer
     .featuredImageLook3.col-lg-12
-      = render partial: 'about_cell', locals: {title: 'Cancer / Chemotherapy', description: 'This would be a blurb about why people who have cancer issues would like to come to insowigs.com.', link: '#', image: 'temp-featured-post.jpg'}
-      = render partial: 'about_cell', locals: {title: 'Thyroid Problems', description: 'This would be a blurb about why people who have thyroid issues would like to come to insowigs.com.', link: '#', image: 'temp-featured-post.jpg'}
-      = render partial: 'about_cell', locals: {title: 'Alopecia Areata', description: 'This would be a blurb about why people who have alopecia areata would like to come to insowigs.com.', link: '#', image: 'temp-featured-post.jpg'}
-      = render partial: 'about_cell', locals: {title: 'Scalp Infection', description: 'This would be a blurb about why people who have a scalp infection would like to come to insowigs.com.', link: '#', image: 'temp-featured-post.jpg'}
-      = render partial: 'about_cell', locals: {title: 'Skin Disorders', description: 'This would be a blurb about why people who have a skin disorder would like to come to insowigs.com.', link: '#', image: 'temp-featured-post.jpg'}
-      = render partial: 'about_cell', locals: {title: 'Emotional Struggles', description: 'This would be a blurb about why people who have emotional problems that cause them to pull their hair out would like to come to insowigs.com.', link: '#', image: 'temp-featured-post.jpg'}
+      = render partial: 'about_cell', locals: {title: 'Cancer / Chemotherapy', description: 'This would be a blurb about why people who have cancer issues would like to come to insowigs.com.', link: '#', image: 'temp/bald.jpg'}
+      = render partial: 'about_cell', locals: {title: 'Thyroid Problems', description: 'This would be a blurb about why people who have thyroid issues would like to come to insowigs.com.', link: '#', image: 'temp/hospital.jpg'}
+      = render partial: 'about_cell', locals: {title: 'Alopecia Areata', description: 'This would be a blurb about why people who have alopecia areata would like to come to insowigs.com.', link: '#', image: 'temp/hair_loss.jpg'}
+      = render partial: 'about_cell', locals: {title: 'Scalp Infection', description: 'This would be a blurb about why people who have a scalp infection would like to come to insowigs.com.', link: '#', image: 'temp/woman.jpg'}
+      = render partial: 'about_cell', locals: {title: 'Skin Disorders', description: 'This would be a blurb about why people who have a skin disorder would like to come to insowigs.com.', link: '#', image: 'temp/doctor.jpeg'}
+      = render partial: 'about_cell', locals: {title: 'Emotional Struggles', description: 'This would be a blurb about why people who have emotional problems that cause them to pull their hair out would like to come to insowigs.com.', link: '#', image: 'temp/sad.jpg'}
 .container.main-container
   .morePost.row.featuredPostContainer.style2
     .col-lg-12
@@ -26,10 +26,10 @@
         %span Featured Products
     .container
       .row.xsResponse
-        = render partial: 'featured_item', locals: {new: true, original_price: 30, discount_percentage: 15, image: 'temp-wig-1.jpg', title: 'Wig 1', description: 'This is a short description of the wig'}
-        = render partial: 'featured_item', locals: {new: true, original_price: 80, discount_percentage: 10, image: 'temp-wig-2.jpg', title: 'Wig 2', description: 'This is a short description of the wig'}
-        = render partial: 'featured_item', locals: {new: true, original_price: 280, discount_percentage: 40, image: 'temp-wig-3.jpg', title: 'Wig 3', description: 'This is a short description of the wig'}
-        = render partial: 'featured_item', locals: {new: true, original_price: 55, discount_percentage: 75, image: 'temp-wig-4.jpg', title: 'Wig 4', description: 'This is a short description of the wig'}
+        = render partial: 'featured_item', locals: {new: true, original_price: 30, discount_percentage: 15, image: 'temp/temp-wig-1.jpg', title: 'Wig 1', description: 'This is a short description of the wig'}
+        = render partial: 'featured_item', locals: {new: true, original_price: 80, discount_percentage: 10, image: 'temp/temp-wig-2.jpg', title: 'Wig 2', description: 'This is a short description of the wig'}
+        = render partial: 'featured_item', locals: {new: true, original_price: 280, discount_percentage: 40, image: 'temp/temp-wig-3.jpg', title: 'Wig 3', description: 'This is a short description of the wig'}
+        = render partial: 'featured_item', locals: {new: true, original_price: 55, discount_percentage: 75, image: 'temp/temp-wig-4.jpg', title: 'Wig 4', description: 'This is a short description of the wig'}
       .row
         .load-more-block.text-center
           = link_to '#', class: 'btn btn-thin' do
