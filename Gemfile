@@ -18,6 +18,8 @@ gem 'devise'
 gem 'omniauth-facebook'
 gem 'bootstrap-sass', '~> 3.2.0'
 gem 'autoprefixer-rails'
+gem 'font-awesome-rails'
+gem 'animate-rails'
 
 group :devlopment do
   gem 'sqlite3'

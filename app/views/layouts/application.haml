@@ -7,6 +7,99 @@
     %meta{content: 'width=device-width, initial-scale=1.0, maximum-scale=1.0', name: 'viewport'}
     %title INSO Wigs & Accessories
     %link{href: 'http://fonts.googleapis.com/css?family=Open+Sans+Condensed:300,300italic,700', rel: 'stylesheet', type: 'text/css'}
+    %link{rel: 'shortcut icon', href: image_path('favicon.ico')}
     = stylesheet_link_tag 'application'
+    <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+    <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
+    <![endif]-->
+    :javascript
+      paceOptions = {
+        elements: true
+      }
   %body
-    = yield
+    .navbar.navbar-tshop.navbar-fixed-top.megamenu{role: 'navigation'}
+      .navbar-top
+        .container
+          .row
+            .col-lg-6.col-sm-6.col-xs-6.col-md-6
+              .pull-left
+                %ul.userMenu
+                  %li
+                    = link_to '#' do
+                      %span
+                        %i.glyphicon.glyphicon-phone-alt
+                      %span.hidden-xs Contact Us
+                  %li.phone-number
+                    = link_to 'mailto:info@insowigs.com' do
+                      %span
+                        %i.glyphicon.glyphicon-envelope
+                      %span.hidden-xs{style: 'margin-left: 5px'} info@insowigs.com
+            .col-lg-6.col-sm-6.col-xs-6.col-md-6.no-margin.no-padding
+              .pull-right
+                %ul.userMenu
+                  %li
+                    = link_to '#' do
+                      %span.hidden-xs My Account
+                      %i.glyphicon.glyphicon-user.hide.visible-xs
+                  %li
+                    = link_to '#', data: {toggle: 'modal', target: '#modal-login'} do
+                      %span.hidden-xs Sign In
+                      %i.glyphicon.glyphicon-log-in.hide.visible-xs
+                  %li.hidden-xs
+                    = link_to '#', data: {toggle: 'modal', target: 'modal-signup'} do
+                      Create Account
+      .container
+        .navbar-header
+          %button.navbar-toggle{type: 'button', data: {toggle: 'collapse', target: '.navbar-collapse'}}
+            %span.sr-only Toggle Navigation
+            %span.icon-bar
+            %span.icon-bar
+            %span.icon-bar
+          %button.navbar-toggle{type: 'button', data: {toggle: 'collapse', target: '.navbar-cart'}}
+            %i.fa.fa-shopping-cart.colorWhite
+            %span.cartResponse.colorWhite Cart ($0)
+          -#= link_to image_tag('logo.png', style: 'height: 30px;'), root_path, class: 'navbar-brand'
+          .search-box.pull-right.hidden-lg.hidden-md.hidden-sm
+            .input-group
+              %button.btn.btn-nobg.getFullSearch{type: 'button'}
+                %i.fa.fa-search
+        = render 'layouts/mobile_cart'
+        .navbar-collapse.collapse
+          %ul.nav.navbar-nav
+            %li.active= link_to 'Home', root_path
+            %li= link_to 'Our Mission', '#'
+            %li= link_to 'Our Wigs', '#'
+            %li= link_to 'Customize Wigs', '#'
+          .nav.navbar-nav.navbar-right.hidden-xs
+            = render 'layouts/desktop_cart'
+            .search-box
+              .input-group
+                %button.btn.btn-nobg.getFullSearch{type: 'button'}
+                  %i.fa.fa-search
+      .search-full.text-right
+        %a.pull-right.search-close
+          %i.fa.fa-times-circle
+        .searchInputBox.pull-right
+          %input.search-input{type: 'search', name: 'q', placeholder: 'start typing and hit enter to search', data: {searchurl: 'search?='}}
+          %button.btn-nobg.search-btn{type: 'submit'}
+            %i.fa.fa-search
+    .container.main-container.headerOffset.globalPaddingBottom
+    = javascript_include_tag 'application'
+    :javascript
+      var mySwiper = new Swiper('.swiper-container',{
+      	pagination: '.box-pagination',
+       keyboardControl: true,
+          paginationClickable: true,
+          slidesPerView: 'auto',
+      	autoResize:true,
+      	resizeReInit:true,
+        })
+        $('.prevControl').on('click', function(e){
+          e.preventDefault()
+          mySwiper.swipePrev()
+        })
+        $('.nextControl').on('click', function(e){
+          e.preventDefault()
+          mySwiper.swipeNext()
+        })

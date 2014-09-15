@@ -1,0 +1,13 @@
+.dropdown.cartMenu
+  = link_to '#', class: 'dropdown-toggle', data: {toggle: 'dropdown'} do
+    %i.fa.fa-shopping-cart
+    %span.cartResponse Cart ($0)
+    %b.caret
+  .dropdown-menu.col-lg-4.col-xs-12.col-md-4
+    .w100.miniCartTable.scroll-pane.mCustomScrollbar._mCS_2{style: 'overflow: hidden;'}
+      #mCSB_2.mCustomScrollBox.mCS-dark-2{style: 'position: relative; height: 100%; overflow: hidden; max-width: 100%; max-height: 300px;'}
+        .mCSB_container.mCS_no_scrollbar{style: 'position: relative; top: 0;'}
+          %table
+            %tr.miniCartProduct
+              %td{style: 'padding-left: 10px;'}
+                %h3 There are no products in your cart.

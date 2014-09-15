@@ -1,0 +1,10 @@
+.navbar-cart.collapse
+  .cartMenu.col-lg-4.col-xs-12.col-md-4
+    .w100.miniCartTable.scroll-pane
+      %table
+    .miniCartFooter.miniCartFooterInMobile.text-right
+      %h3.text-right.subtotal There are no items in your cart
+      -#= link_to '#', class: 'btn btn-sm btn-danger' do
+      -#  %i.fa-fa-shopping-cart
+      -#  View Cart
+      -#= link_to 'Checkout', '#', class: 'btn btn-sm btn-primary'
