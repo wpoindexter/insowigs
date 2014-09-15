@@ -21,7 +21,7 @@ gem 'autoprefixer-rails'
 gem 'font-awesome-rails'
 gem 'animate-rails'
 
-group :devlopment do
+group :development do
   gem 'sqlite3'
   gem 'spring'
 end
