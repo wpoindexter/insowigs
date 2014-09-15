@@ -85,4 +85,67 @@
           %button.btn-nobg.search-btn{type: 'submit'}
             %i.fa.fa-search
     = yield
+    #footer.footer
+      .container
+        .row
+          .col-lg-3.col-md-3.col-sm-4.col-xs-6
+            %h3 Question?
+            %ul
+              %li.supportLi
+                %p Ask us any question, any time!
+                %h4
+                  = link_to 'mailto:info@insowigs.com', class: 'inline' do
+                    %i.fa.fa-envelope-o &nbsp; info@insowigs.com
+          .col-lg-2.col-md-2.col-sm-4.col-xs-6
+            %h3 Shop
+            %ul
+              %li= link_to 'Home', root_path
+              %li= link_to 'Pre-Made Wigs', '#'
+              %li= link_to 'Customized Wigs', '#'
+          .col-lg-2.col-md-2.col-sm-4.col-xs-6
+            %h3 Our Mission
+            %ul
+              %li= link_to 'General Fashion'
+              %li= link_to 'Cancer / Chemotherapy'
+              %li= link_to 'Thyroid Problems'
+              %li= link_to 'Alopecia Areata'
+              %li= link_to 'Skin Disorders'
+              %li= link_to 'Emotional Struggles'
+          .col-lg-2.col-md-2.col-sm-4.col-xs-6
+            %h3 My Account
+            %ul
+              %li= link_to 'Sign In'
+              %li= link_to 'Sign Up'
+              %li= link_to 'My Account'
+              %li= link_to 'My Orders'
+              %li= link_to 'Wish List'
+          .col-lg-3.col-md-3.col-sm-4.col-xs-6
+            %h3 Stay In Touch
+            %ul
+              %li
+                .input-append.newsLatterBox.text-center
+                  = form_tag '/newsletter' do
+                    = email_field_tag :email, '', class: 'full text-center', placeholder: 'Email'
+                    = submit_tag 'Subscribe', class: 'btn btn-gray'
+            %ul.social
+              %li
+                = link_to 'http://facebook.com', target: '_blank' do
+                  %i.fa.fa-facebook &nbsp;
+              %li
+                = link_to 'http://twitter.com', target: '_blank' do
+                  %i.fa.fa-twitter &nbsp;
+              %li
+                = link_to 'http://instagram.com', target: '_blank' do
+                  %i.fa.fa-instagram &nbsp;
+              %li
+                = link_to 'http://plus.google.com.com', target: '_blank' do
+                  %i.fa.fa-google-plus &nbsp;
+              %li
+                = link_to 'http://youtube.com', target: '_blank' do
+                  %i.fa.fa-youtube &nbsp;
+    .footer-bottom
+      .container
+        %p.pull-left &copy; INSO Wigs 2014.  All rights reserved
+        .pull-right.paymentMethodImg
+          = image_tag 'paypal.png', class: 'pull-right', height: '30'
     = javascript_include_tag 'application'
