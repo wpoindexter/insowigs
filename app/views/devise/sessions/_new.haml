@@ -1,0 +1,35 @@
+#ModalLogin.modal.signUpContent.fade{tabindex: '-1', role: 'dialog'}
+  .modal-dialog
+    .modal-content
+      .modal-header
+        %button.close{type: 'button', data: {dismiss: 'modal'}, aria: {hidden: 'true'}} &times;
+        %h3.modal-title-site.text-center Sign in to INSO Wigs
+      .modal-body
+        = form_for(resource, as: resource_name, url: session_path(resource_name)) do |f|
+          .form-group.login-username
+            %div
+              = f.email_field :email, autofocus: true, class: 'form-control input', placeholder: 'Enter Email'
+          .form-group.login-password
+            %div
+              = f.password_field :password, autocomplete: :off, class: 'form-control input', placeholder: 'Enter Password'
+          .form-group
+            %div
+              .checkbox.login-remember
+                %label
+                  = f.check_box :remember_me, {checked: true}
+                  Remember Me
+          %div
+            %div
+              = f.submit 'SIGN IN', class: 'btn btn-block btn-lg btn-primary'
+        %hr
+        = link_to 'SIGN UP WITH FACEBOOK', user_omniauth_authorize_path(:facebook), class: 'btn btn-block fb_button btn-lg'
+      .modal-footer
+        %p.text-center
+          First time here?
+          = link_to 'SIGN UP', new_registration_path(resource_name)
+        %p.text-center
+          Forgot your password?
+          = link_to 'CLICK HERE', new_password_path(resource_name)
+        %p.text-center
+          Didn't receive confirmation instructions?
+          = link_to 'RESEND', new_confirmation_path(resource_name)

@@ -18,6 +18,7 @@
         elements: true
       }
   %body
+    = render 'devise/sessions/new'
     .navbar.navbar-tshop.navbar-fixed-top.megamenu{role: 'navigation'}
       .navbar-top
         .container
@@ -43,7 +44,7 @@
                       %span.hidden-xs My Account
                       %i.glyphicon.glyphicon-user.hide.visible-xs
                   %li
-                    = link_to '#', data: {toggle: 'modal', target: '#modal-login'} do
+                    = link_to '#', data: {toggle: 'modal', target: '#ModalLogin'} do
                       %span.hidden-xs Sign In
                       %i.glyphicon.glyphicon-log-in.hide.visible-xs
                   %li.hidden-xs
