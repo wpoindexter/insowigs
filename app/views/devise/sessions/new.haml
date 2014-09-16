@@ -1,0 +1,38 @@
+.container.main-container.headerOffset
+  .row
+    .breadcrumbDiv.col-lg-12
+      %ul.breadcrumb
+        %li= link_to 'Home', root_path
+        %li.active Sign In
+  .row
+    .col-lg-9.col-md-9.col-sm-7
+      %h1.section-title-inner
+        %span
+          %i.fa.fa-lock &nbsp;Sign In
+      .row.userInfo
+        .col-xs-12.col-sm-6
+          = link_to 'SIGN IN WITH FACEBOOK', user_omniauth_authorize_path(:facebook), class: 'btn btn-block fb_button btn-lg'
+          %hr
+          = form_for(resource, as: resource_name, url: session_path(resource_name), html: {class: 'logForm'}) do |f|
+            .form-group
+              = f.label :email, 'Email Address'
+              = f.email_field :email, class: 'form-control', placeholder: 'Enter Email Address', autofocus: true, required: ''
+            .form-group
+              = f.label :password
+              = f.password_field :password, class: 'form-control', placeholder: 'Enter Password', autocomplete: 'off', required: ''
+            .checkbox
+              %label
+                = f.check_box :remember_me, {checked: true}
+                Remember Me
+            .form-group
+              %p
+                = f.submit 'SIGN IN', class: 'btn btn-block btn-lg btn-primary'
+          %p.text-center
+            First time here?
+            = link_to 'SIGN UP', new_registration_path(resource_name)
+          %p.text-center
+            Forgot your password?
+            = link_to 'CLICK HERE', new_password_path(resource_name)
+          %p.text-center
+            Didn't receive confirmation instructions?
+            = link_to 'RESEND', new_confirmation_path(resource_name)

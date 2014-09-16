@@ -15,4 +15,8 @@ module ApplicationHelper
   def devise_mapping
     @devise_mapping ||= Devise.mappings[:user]
   end
+
+  def my_account_link
+    current_user.nil? ? new_registration_path(resource_name) : '#'
+  end
 end
