@@ -17,6 +17,14 @@ module ApplicationHelper
   end
 
   def my_account_link
-    current_user.nil? ? new_registration_path(resource_name) : '#'
+    current_user.nil? ? new_session_path(resource_name) : '#'
+  end
+
+  def my_orders_link
+    current_user.nil? ? new_session_path(resource_name) : '#'
+  end
+
+  def my_wish_list_link
+    current_user.nil? ? new_session_path(resource_name) : '#'
   end
 end

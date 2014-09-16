@@ -70,7 +70,7 @@
         .navbar-collapse.collapse
           %ul.nav.navbar-nav
             %li.active= link_to 'Home', root_path
-            %li= link_to 'Our Mission', '#'
+            %li= link_to 'Our Mission', '/about'
             %li= link_to 'Pre-Made Wigs', '#'
             %li= link_to 'Customized Wigs', '#'
           .nav.navbar-nav.navbar-right.hidden-xs
@@ -107,20 +107,20 @@
           .col-lg-2.col-md-2.col-sm-4.col-xs-6
             %h3 Our Mission
             %ul
-              %li= link_to 'General Fashion'
-              %li= link_to 'Cancer / Chemotherapy'
-              %li= link_to 'Thyroid Problems'
-              %li= link_to 'Alopecia Areata'
-              %li= link_to 'Skin Disorders'
-              %li= link_to 'Emotional Struggles'
+              %li= link_to 'General Fashion', '/about#general_fashion'
+              %li= link_to 'Cancer / Chemotherapy', '/about#cancer'
+              %li= link_to 'Thyroid Problems', '/about#thyroid_problems'
+              %li= link_to 'Alopecia Areata', '/about#alopecia_areata'
+              %li= link_to 'Skin Disorders', '/about#skin_disorders'
+              %li= link_to 'Emotional Struggles', '/about#emotional_struggles'
           .col-lg-2.col-md-2.col-sm-4.col-xs-6
             %h3 My Account
             %ul
-              %li= link_to 'Sign In'
-              %li= link_to 'Sign Up'
-              %li= link_to 'My Account'
-              %li= link_to 'My Orders'
-              %li= link_to 'Wish List'
+              %li= link_to 'Sign In', new_session_path(resource_name)
+              %li= link_to 'Sign Up', new_registration_path(resource_name)
+              %li= link_to 'My Account', my_account_link
+              %li= link_to 'My Orders', my_orders_link
+              %li= link_to 'Wish List', my_wish_list_link
           .col-lg-3.col-md-3.col-sm-4.col-xs-6
             %h3 Stay In Touch
             %ul

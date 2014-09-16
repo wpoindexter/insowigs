@@ -18,7 +18,7 @@
       - if has_discount
         %span.old-price= number_to_currency original_price
     .action-control
-      = link_to '#', class: 'btn btn-primary' do
+      = link_to cart_link, class: 'btn btn-primary' do
         %span.add2cart
           %i.glyphicon.glyphicon-shopping-cart
           Add to Cart
