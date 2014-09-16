@@ -47,9 +47,10 @@
                     = link_to '#', data: {toggle: 'modal', target: '#ModalLogin'} do
                       %span.hidden-xs Sign In
                       %i.glyphicon.glyphicon-log-in.hide.visible-xs
-                  %li.hidden-xs
-                    = link_to '#', data: {toggle: 'modal', target: 'modal-signup'} do
-                      Create Account
+                  - unless current_user
+                    %li.hidden-xs
+                      = link_to new_registration_path(resource_name) do
+                        Create Account
       .container
         .navbar-header
           %button.navbar-toggle{type: 'button', data: {toggle: 'collapse', target: '.navbar-collapse'}}
