@@ -15,15 +15,21 @@ gem 'haml-rails'
 gem 'activerecord-session_store'
 gem 'i18n'
 gem 'devise'
+gem 'devise_security_extension'
 gem 'omniauth-facebook'
 gem 'bootstrap-sass', '~> 3.2.0'
+gem 'bootstrap-sass-extras'
 gem 'autoprefixer-rails'
 gem 'font-awesome-rails'
 gem 'animate-rails'
+gem 'rails_email_validator'
+gem 'easy_captcha'
 
 group :development do
   gem 'sqlite3'
   gem 'spring'
+  gem 'pry'
+  gem 'pry-nav'
 end
 
 group :production do

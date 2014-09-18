@@ -1,7 +1,9 @@
 class User < ActiveRecord::Base
 
+  after_create :skip_conf!
+
   devise :database_authenticatable, :registerable, :recoverable, :rememberable, :trackable, :validatable,
-         :confirmable, :omniauthable, omniauth_providers: [:facebook]
+         :confirmable, :secure_validatable, :omniauthable, omniauth_providers: [:facebook]
 
   def self.from_omniauth(auth)
     where(provider: auth.provider, uid: auth.uid).first_or_create do |user|
@@ -19,5 +21,11 @@ class User < ActiveRecord::Base
         user.email = data['email'] if user.email.blank?
       end
     end
+  end
+
+  private
+
+  def skip_conf!
+    self.confirm! if Rails.env.development?
   end
 end
