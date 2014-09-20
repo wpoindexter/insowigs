@@ -34,11 +34,11 @@
             = f.text_field :last_name, class: 'form-control', placeholder: 'Enter Last Name', required: ''
           .well
             .form-group
-              = label_tag :captcha, 'Enter CAPTCHA Text'
-              .pull-right= captcha_tag
+              = label_tag :captcha, 'Confirmation'
+              #captcha-image.pull-right= captcha_tag
               %br
               %br
-              = text_field_tag :captcha, '', class: 'form-control', autocomplete: 'off', required: ''
+              = text_field_tag :captcha, '', class: 'form-control', placeholder: 'Enter Captcha Text', autocomplete: 'off', required: ''
           .form-group
             %p
               = f.submit 'SIGN UP', class: 'btn btn-block btn-lg btn-primary'
