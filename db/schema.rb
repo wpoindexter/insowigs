@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140916115034) do
+ActiveRecord::Schema.define(version: 20141006025300) do
 
   create_table "sessions", force: true do |t|
     t.string   "session_id", null: false
@@ -52,6 +52,7 @@ ActiveRecord::Schema.define(version: 20140916115034) do
     t.string   "state"
     t.string   "country"
     t.string   "postal_code"
+    t.boolean  "admin"
   end
 
   add_index "users", ["email"], name: "index_users_on_email", unique: true
