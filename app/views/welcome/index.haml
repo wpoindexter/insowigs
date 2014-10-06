@@ -1,7 +1,9 @@
 .image-show-case-wrapper.center-block.relative.col-lg-12
   #imageShowCase.owl-carousel.owl-theme
-    = render partial: 'product_slide', locals: {title: 'Custom Wigs', link_text: 'Customize My Wig', link: '#', alt_text: '* covered by most insurers', image: 'backstretch-7.jpg'}
-    = render partial: 'product_slide', locals: {title: 'Pre-Made Wigs', link_text: 'Shop Now', link: '#', alt_text: '* covered by most insurers', image: 'backstretch-4.jpg'}
+    = render partial: 'product_slide', locals: {title: 'Custom Wigs', link_text: 'Customize My Wig', link: '#', alt_text: '* covered by most insurers', image: 'slider1.jpg'}
+    = render partial: 'product_slide', locals: {title: 'Pre-Made Wigs', link_text: 'Shop Now', link: '#', alt_text: '* covered by most insurers', image: 'slider2.jpg'}
+    = render partial: 'product_slide', locals: {title: 'Featured Wig Maker 1', link_text: 'Shop Wig Maker 1', link: '#', alt_text: '', image: 'slider3.jpg'}
+    = render partial: 'product_slide', locals: {title: 'Featured Wig Maker 2', link_text: 'Shop Wig Maker 2', link: '#', alt_text: '', image: 'slider4.jpg'}
   %div{style: 'clear: both;'}
   %a#ps-next.ps-nav
     = image_tag 'arrow-right.png'
