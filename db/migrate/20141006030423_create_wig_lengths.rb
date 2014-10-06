@@ -7,6 +7,4 @@ class CreateWigLengths < ActiveRecord::Migration
       t.timestamps
     end
   end
-
-  add_attachment :wig_lengths, :image
 end

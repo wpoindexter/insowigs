@@ -10,6 +10,4 @@ class CreateWigStyles < ActiveRecord::Migration
 
     add_index :wig_styles, :wig_length_id, unique: true
   end
-
-  add_attachment :wig_styles, :image
 end
