@@ -1,28 +1,28 @@
 .image-show-case-wrapper.center-block.relative.col-lg-12
   #imageShowCase.owl-carousel.owl-theme
-    = render partial: 'product_slide', locals: {title: 'Pre-Made Wigs', link_text: 'Shop Now', link: '#', alt_text: '* covered by most insurers', image: 'backstretch-4.jpg'}
     = render partial: 'product_slide', locals: {title: 'Custom Wigs', link_text: 'Customize My Wig', link: '#', alt_text: '* covered by most insurers', image: 'backstretch-7.jpg'}
+    = render partial: 'product_slide', locals: {title: 'Pre-Made Wigs', link_text: 'Shop Now', link: '#', alt_text: '* covered by most insurers', image: 'backstretch-4.jpg'}
   %div{style: 'clear: both;'}
   %a#ps-next.ps-nav
     = image_tag 'arrow-right.png'
   %a#ps-prev.ps-nav
     = image_tag 'arrow-left.png'
 %div{style: 'clear: both;'}
-.col-lg-12
-  %hr.hr3
+.col-lg-12{style: 'margin-top: 30px;'}
+  %h3.boxes-title-1
+    %span Our Custom Wig Process
+  .col-lg-6.col-lg-offset-3.col-xs-12.col-sm-12.col-md-12
+    %h4.text-center INSO Wigs allows you customize a wig that will be 100% your own style.  You select the length of the hair, the style, and the color, and we will create the ensemble for you.
 .row.featuredPostContainer
   .featuredImageLook3.col-lg-12
-    = render partial: 'about_cell', locals: {title: 'General Fashion', description: 'This would be a blurb about why people who are interested in general fashion would like to come to insowigs.com.', link: '/about#general_fashion', image: 'temp/general.jpg'}
-    = render partial: 'about_cell', locals: {title: 'Cancer / Chemotherapy', description: 'This would be a blurb about why people who have cancer issues would like to come to insowigs.com.', link: '/about#cancer', image: 'temp/bald.jpg'}
-    = render partial: 'about_cell', locals: {title: 'Thyroid Problems', description: 'This would be a blurb about why people who have thyroid issues would like to come to insowigs.com.', link: '/about#thyroid_problems', image: 'temp/hospital.jpg'}
-    = render partial: 'about_cell', locals: {title: 'Alopecia Areata', description: 'This would be a blurb about why people who have alopecia areata would like to come to insowigs.com.', link: '/about#alopecia_areata', image: 'temp/hair_loss.jpg'}
-    = render partial: 'about_cell', locals: {title: 'Skin Disorders', description: 'This would be a blurb about why people who have a skin disorder would like to come to insowigs.com.', link: '/about#skin_disorders', image: 'temp/doctor.jpeg'}
-    = render partial: 'about_cell', locals: {title: 'Emotional Struggles', description: 'This would be a blurb about why people who have emotional problems that cause them to pull their hair out would like to come to insowigs.com.', link: '/about#emotional_struggles', image: 'temp/sad.jpg'}
+    = render partial: 'about_cell', locals: {title: 'Step 1 - Select Length', description: 'Choose the length of your custom wig.  Whether the short <strong>Halle Berry</strong>, or the long and full <strong>Beyonce</strong>, we have you covered.', button_text: 'Get Started', link: '#', image: 'temp/black-bg.jpg'}
+    = render partial: 'about_cell', locals: {title: 'Step 2 - Select Style', description: 'Choose from a selection of styles anywhere from a bob with bangs to luxurious curly locks.', button_text: 'Get Started', link: '#', image: 'temp/black-bg.jpg'}
+    = render partial: 'about_cell', locals: {title: 'Step 3 - Select Color', description: 'Any color is OK with us.  Use our simplified color selector to come up with your own hair color.', button_text: 'Get Started', link: '#', image: 'temp/black-bg.jpg'}
 .container.main-container{style: 'margin-bottom: 50px;'}
   .morePost.row.featuredPostContainer.style2
     .col-lg-12
       %h3.boxes-title-1
-        %span Featured Products
+        %span Shop Our Pre-Made Wigs
     .container
       .row.xsResponse
         = render partial: 'featured_item', locals: {new: true, original_price: 30, discount_percentage: 15, image: 'temp/temp-wig-1.jpg', title: 'Wig 1', description: 'This is a short description of the wig', cart_link: '#'}
@@ -33,7 +33,7 @@
         .load-more-block.text-center
           = link_to '#', class: 'btn btn-thin' do
             %i.fa.fa-plus-sign +
-            SHOP ALL PRODUCTS
+            SHOP ALL PRE-MADE WIGS
   .parallax-section.parallax-image-2
     .w100.parallax-section-overley
       .container
