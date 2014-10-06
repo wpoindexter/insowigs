@@ -24,6 +24,7 @@ gem 'font-awesome-rails'
 gem 'animate-rails'
 gem 'rails_email_validator'
 gem 'easy_captcha'
+gem 'paperclip'
 
 group :development do
   gem 'sqlite3'
