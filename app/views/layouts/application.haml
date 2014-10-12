@@ -17,7 +17,7 @@
     :javascript
       paceOptions = {
         elements: true
-      }
+      };
   %body
     = render 'devise/sessions/new'
     .navbar.navbar-tshop.navbar-fixed-top.megamenu{role: 'navigation'}
@@ -75,7 +75,7 @@
           %ul.nav.navbar-nav
             %li.active= link_to 'Home', root_path
             %li= link_to 'Our Mission', '/about'
-            %li= link_to 'Customize My Wig', '#'
+            %li= link_to 'Customize My Wig', '/custom'
             %li= link_to 'Shop Pre-Made Wigs', '#'
           .nav.navbar-nav.navbar-right.hidden-xs
             = render 'layouts/desktop_cart'
@@ -90,9 +90,8 @@
           %input.search-input{type: 'search', name: 'q', placeholder: 'start typing and hit enter to search', data: {searchurl: 'search?='}}
           %button.btn-nobg.search-btn{type: 'submit'}
             %i.fa.fa-search
-    .container.main-container.headerOffset
-      .row
-        .col-lg-12= bootstrap_flash
+    .container.main-container.headerOffset{style: 'margin-bottom: 50px;'}
+      .col-lg-12= bootstrap_flash
       = yield
     #footer.footer
       .container
@@ -111,7 +110,7 @@
             %ul
               %li= link_to 'Home', root_path
               %li= link_to 'Pre-Made Wigs', '#'
-              %li= link_to 'Customized Wigs', '#'
+              %li= link_to 'Customized Wigs', '/custom'
           .col-lg-2.col-md-2.col-sm-4.col-xs-6
             %h3 Our Mission
             %ul

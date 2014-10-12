@@ -1,0 +1,26 @@
+= render 'custom_breadcrumbs'
+.row
+  .col-lg-9.col-md-9.col-sm-7
+    %h1.section-title-inner
+      %span
+        %i.fa.fa-image
+        Step 1 - Choose Design
+.row
+  .col-lg-9.col-md-9.col-sm-12
+    .row.userInfo
+      .col-xs-12.col-sm-12
+        = render partial: 'steps', locals: {step: :design}
+        .w100.clearfix
+          .thumbnail{style: 'height: 300px;'}
+        .cartFooter.w100
+          .box-footer
+            .pull-left
+              = link_to '/custom/length', class: 'btn btn-default' do
+                %i.fa.fa-arrow-left
+                Step 1 - Choose Length
+            .pull-right
+              = link_to '/custom/color', class: 'btn btn-primary' do
+                %i.fa.fa-arrow-right
+                Step 3 - Choose Color
+  .col-lg-3.col-md-3.col-sm-12.rightSidebar
+    = render 'summary'

@@ -1,6 +1,6 @@
 .image-show-case-wrapper.center-block.relative.col-lg-12
   #imageShowCase.owl-carousel.owl-theme
-    = render partial: 'product_slide', locals: {title: 'Custom Wigs', link_text: 'Customize My Wig', link: '#', alt_text: '* covered by most insurers', image: 'slider1.jpg'}
+    = render partial: 'product_slide', locals: {title: 'Custom Wigs', link_text: 'Customize My Wig', link: '/custom', alt_text: '* covered by most insurers', image: 'slider1.jpg'}
     = render partial: 'product_slide', locals: {title: 'Pre-Made Wigs', link_text: 'Shop Now', link: '#', alt_text: '* covered by most insurers', image: 'slider2.jpg'}
     = render partial: 'product_slide', locals: {title: 'Featured Wig Maker 1', link_text: 'Shop Wig Maker 1', link: '#', alt_text: '', image: 'slider3.jpg'}
     = render partial: 'product_slide', locals: {title: 'Featured Wig Maker 2', link_text: 'Shop Wig Maker 2', link: '#', alt_text: '', image: 'slider4.jpg'}
@@ -17,10 +17,10 @@
     %h4.text-center INSO Wigs allows you customize a wig that will be 100% your own style.  You select the length of the hair, the style, and the color, and we will create the ensemble for you.
 .row.featuredPostContainer
   .featuredImageLook3.col-lg-12
-    = render partial: 'about_cell', locals: {title: 'Step 1 - Select Length', description: 'Choose the length of your custom wig.  Whether the short <strong>Halle Berry</strong>, or the long and full <strong>Beyonce</strong>, we have you covered.', button_text: 'Get Started', link: '#', image: 'temp/black-bg.jpg'}
-    = render partial: 'about_cell', locals: {title: 'Step 2 - Select Style', description: 'Choose from a selection of styles anywhere from a bob with bangs to luxurious curly locks.', button_text: 'Get Started', link: '#', image: 'temp/black-bg.jpg'}
-    = render partial: 'about_cell', locals: {title: 'Step 3 - Select Color', description: 'Any color is OK with us.  Use our simplified color selector to come up with your own hair color.', button_text: 'Get Started', link: '#', image: 'temp/black-bg.jpg'}
-.container.main-container{style: 'margin-bottom: 50px;'}
+    = render partial: 'about_cell', locals: {title: 'Step 1 - Select Length', description: 'Choose the length of your custom wig.  Whether the short <strong>Halle Berry</strong>, or the long and full <strong>Beyonce</strong>, we have you covered.', button_text: 'Get Started', link: '/custom', image: 'temp/black-bg.jpg'}
+    = render partial: 'about_cell', locals: {title: 'Step 2 - Select Design', description: 'Choose from a selection of styles anywhere from a bob with bangs to luxurious curly locks.', button_text: 'Get Started', link: '/custom', image: 'temp/black-bg.jpg'}
+    = render partial: 'about_cell', locals: {title: 'Step 3 - Select Color', description: 'Any color is OK with us.  Use our simplified color selector to come up with your own hair color.', button_text: 'Get Started', link: '/custom', image: 'temp/black-bg.jpg'}
+.container.main-container
   .morePost.row.featuredPostContainer.style2
     .col-lg-12
       %h3.boxes-title-1
@@ -44,4 +44,4 @@
             .parallax-content.clearfix
               %h1.xlarge Build a Custom Wig
               %h5.parallaxSubtitle Or purchase one of our existing wigs
-              = link_to 'Start Here', '#', class: 'btn btn-stroke-light'
+              = link_to 'Start Here', '/custom', class: 'btn btn-stroke-light'

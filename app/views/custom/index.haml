@@ -1,0 +1,44 @@
+.image-show-case-wrapper.center-block.relative.col-lg-12
+  #imageShowCase.owl-carousel.owl-theme
+    .product-slide
+      .box-content-overly.box-content-overlay-white
+        .box-text-table
+          .box-text-cell
+            .box-text-cell-inner
+              %h1 DESIGN YOUR OWN WIG
+              = link_to 'START HERE', '/custom/length', class: 'btn btn-stroke-light'
+              %br
+              %br
+              %span Do you want a custom look all to yourself?  Use our personalized wig designer to customize all facets of your wig.
+      = image_tag 'beyonce1.jpg', class: 'img-responsive'
+%div{style: 'clear: both;'}
+.col-lg-12{style: 'margin-top: 30px;'}
+  %h3.boxes-title-1
+    %span Our Custom Wig Process
+  .product-tab.w100.clearfix
+    %ul.nav.nav-tabs
+      %li.active
+        = link_to 'Step 1 - Length', '#length', data: {toggle: 'tab'}
+      %li
+        = link_to 'Step 2 - Design', '#design', data: {toggle: 'tab'}
+      %li
+        = link_to 'Step 3 - Color', '#color', data: {toggle: 'tab'}
+    .tab-content
+      .tab-pane.active#length
+        Length details...
+      .tab-pane#design
+        Design details...
+      .tab-pane#color
+        Color details...
+.col-lg-12
+  .col-lg-6.col-lg-offset-3.col-xs-12.col-sm-12.col-md-12
+    = link_to 'START HERE', '/custom/length', class: 'btn btn-lg btn-primary btn-block'
+.container.main-container{style: 'margin-bottom: 50px;'}
+  .morePost.row.featuredPostContainer.style2
+    .col-lg-12{style: 'margin-top: 30px;'}
+      %h3.boxes-title-1
+        %span Some INSO Wig Samples
+    .container
+      .row.xsResponse
+        - 16.times do
+          = render partial: 'sample', locals: {image: 'temp/black-bg.jpg'}

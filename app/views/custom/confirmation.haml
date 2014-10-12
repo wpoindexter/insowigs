@@ -1,0 +1,26 @@
+= render 'custom_breadcrumbs'
+.row
+  .col-lg-9.col-md-9.col-sm-7
+    %h1.section-title-inner
+      %span
+        %i.fa.fa-thumbs-o-up
+        Confirmation
+.row
+  .col-lg-9.col-md-9.col-sm-12
+    .row.userInfo
+      .col-xs-12.col-sm-12
+        = render partial: 'steps', locals: {step: :confirmation}
+        .w100.clearfix
+          .thumbnail{style: 'height: 300px;'}
+        .cartFooter.w100
+          .box-footer
+            .pull-left
+              = link_to '/custom/photos', class: 'btn btn-default' do
+                %i.fa.fa-arrow-left
+                Upload Photos
+            .pull-right
+              = link_to '', class: 'btn btn-primary' do
+                %i.fa.fa-arrow-right
+                Add To Cart
+  .col-lg-3.col-md-3.col-sm-12.rightSidebar
+    = render 'summary'

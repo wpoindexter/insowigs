@@ -1,0 +1,22 @@
+.w100.clearfix
+  %ul.orderStep
+    %li{class: step.eql?(:length) ? 'active' : ''}
+      = link_to '/custom/length' do
+        %i.fa.fa-arrows-v
+        %span Choose Length
+    %li{class: step.eql?(:design) ? 'active' : ''}
+      = link_to '/custom/design' do
+        %i.fa.fa-image
+        %span Choose Design
+    %li{class: step.eql?(:color) ? 'active' : ''}
+      = link_to '/custom/color' do
+        %i.fa.fa-eyedropper
+        %span Choose Color
+    %li{class: step.eql?(:photos) ? 'active' : ''}
+      = link_to '/custom/photos' do
+        %i.fa.fa-camera-retro
+        %span Photo
+    %li{class: step.eql?(:confirmation) ? 'active' : ''}
+      = link_to '/custom/confirmation' do
+        %i.fa.fa-thumbs-o-up
+        %span Confirmation
