@@ -7,7 +7,7 @@
             %h1.uppercase= title
             %p= description.html_safe
             %hr.submini
-            = link_to button_text, '#', class: 'btn btn-inverse'
+            = link_to button_text, link, class: 'btn btn-inverse'
     .img-title= title
     = link_to link, class: 'img-block' do
       = image_tag image, class: 'img-responsive'

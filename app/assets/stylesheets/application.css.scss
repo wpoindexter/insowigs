@@ -19,11 +19,32 @@
  *= require ion.checkRadio.cloudy
  *= require jquery.mCustomScrollbar
  */
-
 @import "bootstrap-sprockets";
 @import "bootstrap";
 @import "font-awesome";
 @import "animate";
+
+@media (min-width: 768px) {
+  .container {
+    width: 750px;
+  }
+}
+
+@media (min-width: 992px) {
+  .container {
+    width: 970px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .container {
+    width: 1170px;
+  }
+}
+
+
+
+
 
 .boxes-title-1 {
   margin-bottom: 10px !important;
