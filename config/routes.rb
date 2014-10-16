@@ -1,5 +1,12 @@
 Rails.application.routes.draw do
 
+  get '/admin' => 'admin#index'
+
+  namespace :admin do
+    resources :wig_lengths
+    resources :wig_designs
+  end
+
   captcha_route
 
   devise_for :users, controllers: {omniauth_callbacks: 'users/omniauth_callbacks'}

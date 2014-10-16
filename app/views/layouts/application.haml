@@ -41,9 +41,14 @@
               .pull-right
                 %ul.userMenu
                   %li
-                    = link_to my_account_link do
-                      %span.hidden-xs My Account
-                      %i.glyphicon.glyphicon-user.hide.visible-xs
+                    - if current_user and current_user.admin?
+                      = link_to '/admin' do
+                        %span.hidden-xs Admin Home
+                        %i.glyphicon.glyphicon-user.hide.visible-xs
+                    - else
+                      = link_to my_account_link do
+                        %span.hidden-xs My Account
+                        %i.glyphicon.glyphicon-user.hide.visible-xs
                   %li
                     - if current_user
                       = link_to 'Sign out', destroy_user_session_path, class: 'text-danger', method: :delete

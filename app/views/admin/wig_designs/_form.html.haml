@@ -1,0 +1,16 @@
+= form_for [:admin, @wig_design] do |f|
+  - if @wig_design.errors.any?
+    #error_explanation
+      %h2= "#{pluralize(@wig_design.errors.count, 'error')} prohibited this wig design from being saved:"
+      %ul
+        - @wig_design.errors.full_messages.each do |msg|
+          %li= msg
+  .form-group
+    = f.label :name, 'Name'
+    = f.text_field :name, class: 'form-control', placeholder: 'Enter Name'
+  .form-group
+    = f.label :wig_length_id, 'Wig Length'
+    = f.collection_select :wig_length_id, WigLength.all.sort_by(&:title), :id, :title, {prompt: 'Select a wig length'}, {class: 'form-control'}
+  .actions
+    = link_to 'Back', admin_wig_lengths_path, class: 'btn btn-primary'
+    = f.submit 'Save', class: 'btn'

@@ -1,0 +1,15 @@
+.col-lg-3= render 'admin/admin_nav'
+.col-lg-9
+  %h1 Wig Designs
+  - unless @wig_designs.empty?
+    %table.table.table-bordered.table-hover
+      %tr
+        %th Name
+        %th
+        %th
+      - @wig_designs.each do |wig_design|
+        %tr
+          %td= wig_design.name
+          %td= link_to 'Edit', edit_admin_wig_design_path(wig_design), class: 'btn btn-warning'
+          %td= link_to 'Destroy', [:admin, wig_design], class: 'btn btn-danger', method: :delete, data: { confirm: 'Are you sure?' }
+  = link_to 'New Wig Design', new_admin_wig_design_path, class: 'btn btn-lg btn-primary'

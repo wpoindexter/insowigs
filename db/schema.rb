@@ -73,6 +73,7 @@ ActiveRecord::Schema.define(version: 20141012211312) do
   add_index "wig_designs", ["wig_length_id"], name: "index_wig_designs_on_wig_length_id", unique: true
 
   create_table "wig_lengths", force: true do |t|
+    t.string   "title"
     t.text     "description"
     t.datetime "created_at"
     t.datetime "updated_at"

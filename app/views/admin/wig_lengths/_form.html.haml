@@ -1,0 +1,19 @@
+= form_for [:admin, @wig_length] do |f|
+  - if @wig_length.errors.any?
+    #error_explanation
+      %h2= "#{pluralize(@wig_length.errors.count, 'error')} prohibited this wig length from being saved:"
+      %ul
+        - @wig_length.errors.full_messages.each do |msg|
+          %li= msg
+  .form-group
+    = f.label :title, 'Title'
+    = f.text_field :title, class: 'form-control', placeholder: 'Enter Title'
+  .form-group
+    = f.label :inches, 'Length (in.)'
+    = f.number_field :inches, class: 'form-control', placeholder: 'Enter Length'
+  .form-group
+    = f.label :description, 'Description'
+    = f.text_area :description, class: 'form-control', placeholder: 'Enter Description', style: 'height: 100px;'
+  .actions
+    = link_to 'Back', admin_wig_lengths_path, class: 'btn btn-primary'
+    = f.submit 'Save', class: 'btn'

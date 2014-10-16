@@ -1,4 +1,4 @@
-class WigStyle < ActiveRecord::Base
+class WigDesign < ActiveRecord::Base
 
   belongs_to :wig_length
 
