@@ -9,7 +9,6 @@ gem 'coffee-rails', '~> 4.0.0'
 gem 'jquery-rails'
 gem 'turbolinks'
 gem 'jbuilder', '~> 2.0'
-gem 'unicorn'
 gem 'therubyracer', platforms: :ruby
 gem 'haml-rails'
 gem 'activerecord-session_store'
@@ -34,6 +33,5 @@ group :development do
 end
 
 group :production do
-  gem 'rails_12factor'
   gem 'pg'
 end
