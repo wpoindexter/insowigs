@@ -1,15 +1,16 @@
 class ApplicationController < ActionController::Base
-  after_filter :reset_last_captcha_code!
-
   protect_from_forgery with: :exception
 
+  http_basic_authenticate_with name: 'insowigs', password: 'insowigs' if Rails.env.eql? 'production'
+
+  after_filter :reset_last_captcha_code!
+
   def after_sign_in_path_for(resource)
-    return '/admin' if resource.admin?
-    'http://yahoo.com'
+    '/admin' if resource.admin?
   end
 
   def after_sign_up_path_for(resource)
-    'http://google.com'
+    
   end
 
   def require_user
